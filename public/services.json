@@ -1,0 +1,44 @@
+[
+    {
+        "id": 111,
+        "title": "Pediatrics",
+        "img": "https://i.ibb.co/Tvf1Rn9/periatric.png",
+        "description": "Our pediatricians and family medicine physicians provide primary care to children at more than 25 locations throughout the greater Los Angeles region. Our pediatric specialists also spend time in community offices, so your child can get the care they need, close to home. In addition to in-person appointments, parents can ask questions, schedule appointments and request referrals in their child’s patient portal, myUCLAhealth. Our primary and specialty care pediatric teams are in regular contact to ensure that your child’s care is comprehensive and coordinated. UCLA Health physicians can access your child’s electronic medical record, where they can see immunization schedules, lab tests and imaging studies. Our portal gives parents peace of mind, with less paperwork to manage and details to remember. UCLA Children’s Discovery and Innovation Institute conducts groundbreaking research that prevents and treats childhood diseases. The team of experts has been saving lives through scientific discovery since 2013.",
+        "short_desc": "At UCLA Health, we partner with families to deliver expert, compassionate care to infants, children and teens.Pediatrics is the branch of medicine dealing with the health and medical care of infants, children, and adolescents from birth up to the age of 18."
+    },
+    {
+        "id": 112,
+        "title": "Cardiology",
+        "img": "https://i.ibb.co/GPMJGzB/cardiology.png",
+        "description": "When patients choose UCLA Health, they benefit from working with leaders in the various cardiac fields. We have among the largest heart transplant and lung transplant programs in the country. And, we are a leading center in treating and managing heart failure. We use minimally invasive and robotic surgery techniques, including robotic heart valve surgery and surgery for cardiac arrhythmias. We are experts in surgical treatment for thoracic aortic aneurysms and aortic dissections.",
+        "short_desc": "Our comprehensive heart services include general and preventive cardiology, cardiac testing and imaging, specialized cardiology and cardiac surgery."
+    },
+    {
+        "id": 113,
+        "title": "Neurosurgery",
+        "img": "https://i.ibb.co/qdM4JdV/neurosurgery.png",
+        "description": "Our neurosurgeons are leaders in their chosen field. Several of our program’s clinicians consistently rank among the “Best Doctors in America” by the American Health Council. Many of our researchers and scientists are recognized leaders in clinical neuroscience and neurobiology. We collaborate closely with subspecialists in neurology, critical care and other areas. This team approach allows us to offer targeted, comprehensive care.  If you or your child needs brain surgery, we aim to make your experience as smooth and stress-free as possible. We offer a Peer Support Program where we connect you with a former patient or family member who has had a similar treatment journey.",
+        "short_desc": "Our top-rated neurosurgeons use advanced imaging and surgical techniques to treat neurological conditions, such as brain tumors and traumatic brain injury."
+    },
+    {
+        "id": 114,
+        "title": "Cancer Care",
+        "img": "https://i.ibb.co/qgnxY1S/cancer.png",
+        "description": "Our neurosurgeons are leaders in their chosen field. Several of our program’s clinicians consistently rank among the “Best Doctors in America” by the American Health Council. Many of our researchers and scientists are recognized leaders in clinical neuroscience and neurobiology. We collaborate closely with subspecialists in neurology, critical care and other areas. This team approach allows us to offer targeted, comprehensive care.  If you or your child needs brain surgery, we aim to make your experience as smooth and stress-free as possible. We offer a Peer Support Program where we connect you with a former patient or family member who has had a similar treatment journey.",
+        "short_desc": "Our top-rated neurosurgeons use advanced imaging and surgical techniques to treat neurological conditions, such as brain tumors and traumatic brain injury."
+    },
+    {
+        "id": 115,
+        "title": "Heart/Cardiovascular Services",
+        "img": "https://i.ibb.co/znvzN3R/heart.png",
+        "description": "When patients choose UCLA Health, they benefit from working with leaders in the various cardiac fields. We have among the largest heart transplant and lung transplant programs in the country. And, we are a leading center in treating and managing heart failure.We use minimally invasive and robotic surgery techniques, including robotic heart valve surgery and surgery for cardiac arrhythmias. We are experts in surgical treatment for thoracic aortic aneurysms and aortic dissections.Our dedicated research teams keep us at the forefront of new and promising treatments. Patients have access to advanced, leading-edge therapies.",
+        "short_desc": "The UCLA Division of Heart and Vascular Services has been providing the most advanced, world-class cardiovascular care for more than 25 years. Nationally, we rank 9th in Cardiology, as determined by U.S. News & World Report."
+    },
+    {
+        "id": 116,
+        "title": "Radiology",
+        "img": "https://i.ibb.co/5h79cfX/Radiology.png",
+        "description": "We provide all types of imaging services, both on an inpatient and outpatient basis. We offer specialized services in breast imaging, pediatric imaging, acute care imaging and more. These specializations mean that you receive the most advanced options for your condition and needs.Our radiologists use advanced techniques to give you the most accurate diagnosis possible. For example, we have a quantitative three-dimensional imaging lab where we combine high-resolution 3D images with powerful software. This technology gives us unparalleled ability to plan efficient and effective procedures.",
+        "short_desc": "At UCLA Health, our radiology team combines experience and technology to deliver exceptional care. We have achieved international recognition for our research programs. Many of our faculty are known worldwide as leaders in their field."
+    }
+]
