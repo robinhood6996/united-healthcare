@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useHistory } from 'react-router-dom';
+import Swal from 'sweetalert2';
 // import Swal from 'sweetalert2';
 import useAuth from '../../Hooks/useAuth';
 
@@ -22,15 +23,15 @@ const Login = () => {
                 history.push(redirectURL);
                 // Swal('sign in successfully', 'Welcome Back', 'info')
 
-            });
-        // .catch(error => {
-        //     Swal.fire({
-        //         icon: 'error',
-        //         title: 'Oops...',
-        //         text: `${error.message}`
-        //     })
-        // }).finally(() => setIsLoading(false))
+            }).catch(error => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: `${error.message}`
+                })
+            })
     }
+
     const handleGoogleSignIn = () => {
         googleSingIn()
             .then(res => {

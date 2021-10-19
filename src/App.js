@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Nav from './Pages/Nav/Nav';
 import Slider from './Pages/Slider/Slider';
 import Services from './Pages/Service/Home/Services';
@@ -13,18 +13,20 @@ import AllService from './Pages/Service/AllService';
 import About from './Pages/About/About';
 import Appointment from './Pages/Appointment/Appointment';
 import PrivateRoute from './routes/PrivateRoute';
+import Faq from './Pages/Faq/Faq';
+import Home from './Pages/Home/Home';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
-        <BrowserRouter>
+        <Router>
           <Nav></Nav>
           <Switch>
             <Route exact path="/">
-              <Slider></Slider>
-              <Services></Services>
+              <Home></Home>
             </Route>
             <Route path="/service/:id">
               <SingleService></SingleService>
@@ -41,12 +43,18 @@ function App() {
             <Route path="/about">
               <About></About>
             </Route>
+            <Route path="/faq">
+              <Faq></Faq>
+            </Route>
             <PrivateRoute path="/appointment/:title">
               <Appointment></Appointment>
             </PrivateRoute>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
           <Footer></Footer>
-        </BrowserRouter>
+        </Router>
       </AuthProvider>
     </div>
   );

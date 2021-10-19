@@ -1,30 +1,42 @@
 import React from 'react';
 import { useParams } from 'react-router';
+import Swal from 'sweetalert2';
 import useAuth from '../../Hooks/useAuth';
+import { useForm } from "react-hook-form";
 
 const Appointment = () => {
     const { title } = useParams();
     const { user } = useAuth();
-    console.log(user)
+
+
+    const submitAppointment = (data) => {
+        console.log(data)
+        Swal.fire({
+            icon: 'success',
+            title: 'WOW!',
+            text: `Thanks ${user.displayName} for submit an appointment`
+        })
+    }
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     return (
         <div className="container mx-auto mt-5 mb-5">
             <h1 className="text-5xl font-bold text-red-600 my-5 text-center">Book Your Appointment</h1>
             <div className="form-container flex justify-center">
-                <form className="w-full ">
+                <form className="w-full " onSubmit={handleSubmit(submitAppointment)}>
                     <div className="flex flex-wrap -mx-3 mb-6">
                         <div className="w-full md:w-2/2 px-3 mb-6 md:mb-0">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
                                 First Name
                             </label>
-                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" defaultValue={user.displayName} />
-                            {/* <p class="text-red-500 text-xs italic">Please fill out this field.</p> */}
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" defaultValue={user.displayName} {...register("name", { required: true })} />
+                            {errors.name && <p class="text-red-500 text-xs italic">Please fill out this field.</p>}
                         </div>
                         <div className="w-full md:w-2/2 px-3">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-last-name">
                                 Email
                             </label>
-                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" defaultValue={user.email} />
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" defaultValue={user.email} {...register("email", { required: true })} />
                         </div>
                     </div>
                     <div className="flex flex-wrap -mx-3 mb-6">
@@ -32,7 +44,7 @@ const Appointment = () => {
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
                                 Subject
                             </label>
-                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" defaultValue={title} />
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" defaultValue={title} {...register("subject", { required: true })} />
                             <p className="text-gray-600 text-xs italic">Your expected service</p>
                         </div>
                     </div>
@@ -70,8 +82,9 @@ const Appointment = () => {
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
                                 Message
                             </label>
-                            <textarea name="" id="" cols="30" rows="10" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4"></textarea>
+                            <textarea name="" id="" cols="30" rows="10" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4" {...register("message", { required: true })}></textarea>
                             <p className="text-gray-600 text-xs italic">Describe any special message</p>
+                            {errors.message && <p class="text-red-500 text-lg italic">Please fill out this field.</p>}
                         </div>
                     </div>
                     <div className="flex flex-wrap -mx-3 mb-6">

@@ -11,7 +11,17 @@ function Nav() {
 
 
     return (
-        <div className="shadow-lg">
+        <div className="shadow-lg sticky top-0 bg-white z-50">
+            <div>
+                {
+                    user.email ? (<div className="lg:hidden text-center">
+                        <h2 className="md:font-bold text-red-600 text-sm"><span className="md:font-sm text-gray-800 ">Welcome!</span> {user.displayName}</h2>
+
+                    </div>) : ('')
+                }
+                <hr />
+            </div>
+
             <nav className="bg-white-700">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
@@ -57,37 +67,38 @@ function Nav() {
                                     </Link>
 
                                     <Link
-                                        to="#"
+                                        to="/faq"
                                         className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
-                                        Contact Us
+                                        FAQ
 
                                     </Link>
+
+                                    {/* Conditional Login and Logout button */}
                                     {
                                         user.email ?
-                                            (<button className="text-white bg-red-500 hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={signOutUser}>
+                                            (<button className="text-white transition duration-500 bg-red-800 hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={signOutUser}>
                                                 Logout
                                             </button>)
                                             :
                                             (<Link
                                                 to="/login"
-                                                className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                                                className="text-black hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                                                 Login
                                             </Link>)
                                     }
+
                                 </div>
 
                             </div>
-                            {/* Right */}
-                            {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                                <div className='flex '>
-                                    <h5>Robin</h5>
-                                    <img src="" width="50px" alt="" />
-                                </div>
-                            </div> */}
-                            {/* Right */}
-                        </div>
 
+                        </div>
+                        {
+                            user.email ? (<div className="sm:hidden md:block lg:block mx-auto text-center">
+                                <h2 className="md:font-bold text-red-600 text-sm"><span className="md:font-sm text-gray-800 ">Welcome!</span> {user.displayName}</h2>
+
+                            </div>) : ('')
+                        }
 
 
                         <div className="-mr-2 flex md:hidden">
@@ -134,8 +145,13 @@ function Nav() {
                                 )}
                             </button>
                         </div>
+
+
+
                     </div>
+
                 </div >
+
 
                 <Transition
                     show={isOpen}
@@ -164,25 +180,26 @@ function Nav() {
                                 </Link>
 
                                 <Link
-                                    to="#"
+                                    to="/"
                                     className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
                                     Doctors
                                 </Link>
 
                                 <Link
-                                    href="/about"
+                                    to="/about"
                                     className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
                                     About Us
                                 </Link>
 
                                 <Link
-                                    href="#"
+                                    to="/faq"
                                     className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
-                                    Contact Us
+                                    FAQ
                                 </Link>
+                                {/* conditional login and logout  */}
                                 {
                                     user.email ?
                                         (<button className="text-white bg-red-500 hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={signOutUser}>

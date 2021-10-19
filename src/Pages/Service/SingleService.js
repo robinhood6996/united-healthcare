@@ -28,7 +28,7 @@ const SingleService = () => {
                     <div className="my-auto mx-auto">
                         <div className="flex my-5 gap-4 shadow-lg p-4">
                             <div className="icon">
-                                <FontAwesomeIcon className="text-5xl text-red-600 transiton duration-500 hover:text-gray-800" icon={faMapMarked} />
+                                <FontAwesomeIcon className="text-5xl text-red-800 transiton duration-500 hover:text-gray-800" icon={faMapMarked} />
                             </div>
                             <div className="address">
                                 <h3 className="text-xl">Address</h3>
@@ -37,7 +37,7 @@ const SingleService = () => {
                         </div>
                         <div className="flex my-5 gap-4 shadow-lg p-4">
                             <div className="icon">
-                                <FontAwesomeIcon className="text-5xl text-red-600 transiton duration-500 hover:text-gray-800" icon={faMobileAlt} />
+                                <FontAwesomeIcon className="text-5xl text-red-800 transiton duration-500 hover:text-gray-800" icon={faMobileAlt} />
                             </div>
                             <div className="address">
                                 <h3 className="text-xl">Call Us</h3>
@@ -46,7 +46,7 @@ const SingleService = () => {
                         </div>
                         <div className="flex my-5 gap-4 shadow-lg p-4">
                             <div className="icon">
-                                <FontAwesomeIcon className="text-5xl text-red-600 transiton duration-500 hover:text-gray-800" icon={faEnvelopeOpen} />
+                                <FontAwesomeIcon className="text-5xl text-red-800 transiton duration-500 hover:text-gray-800" icon={faEnvelopeOpen} />
                             </div>
                             <div className="address">
                                 <h3 className="text-xl">Write to  us</h3>
@@ -56,12 +56,12 @@ const SingleService = () => {
                     </div>
                 </div>
                 <div className="heading mb-5">
-                    <h2 className="text-4xl font-medium text-red-600 my-4">{item.title}</h2>
+                    <h2 className="text-4xl font-medium text-red-800 my-4">{item.title}</h2>
                     <p className="text-lg text-gray-600">{item.short_desc}</p>
 
-                    <h4 className="text-2xl font-semibold text-red-600 my-3">Details of service:</h4>
+                    <h4 className="text-2xl font-semibold text-red-800 my-3">Details of service:</h4>
                     <p className="text-lg text-gray-600 my-4">{item.description}</p>
-                    <button className="bg-red-600 text-white hover:bg-gray-800 hover:ring-red-200 p-2 my-4 border rounded-lg shadow-lg transition duration-500 transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none" onClick={() => handleAppointment(item.title)}><FontAwesomeIcon icon={faCalendarCheck} className="mx-3" />Book an appointment</button>
+                    <button className="bg-red-800 text-white hover:bg-gray-800 hover:ring-red-200 p-2 my-4 border rounded-lg shadow-lg transition duration-500 transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none" onClick={() => handleAppointment(item.title)}><FontAwesomeIcon icon={faCalendarCheck} className="mx-3" />Book an appointment</button>
                 </div>
             </div>)}
         </div>

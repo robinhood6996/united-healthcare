@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut, updateProfile, onAuthStateChanged, GoogleAuthProvider, signInWithPopup } from '@firebase/auth';
 import { useEffect, useState } from 'react';
-import { useHistory } from 'react-router';
+import { useHistory, withRouter } from 'react-router';
 import Swal from 'sweetalert2';
 
 import initializeAuthentication from '../firebase/firebase.init';
@@ -36,8 +36,11 @@ const useFirebase = () => {
                 updateProfile(auth.currentUser, {
                     displayName: name
                 }).then(() => {
-                    history.push("/");
-                    // Swal('Good Job!', 'Your account has been created', 'success')
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Oops...',
+                        text: `Thanks for creating account with us`
+                    })
                 })
             }).catch(error => {
                 Swal.fire({
@@ -82,8 +85,9 @@ const useFirebase = () => {
         setIsLoading(true);
         signOut(auth)
             .then(() => {
+                // history.push('/login');
                 setUser({});
-                history.push('/login');
+
             }).catch(error => {
                 Swal.fire({
                     icon: 'error',
