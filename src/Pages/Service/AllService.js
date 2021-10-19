@@ -2,15 +2,14 @@ import { faHandHoldingMedical } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useFetch from '../../../Hooks/useFetch';
+import useFetch from '../../Hooks/useFetch';
 
-const Services = () => {
+const AllService = () => {
     const [services] = useFetch();
 
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto my-5">
             <div className="flex flex-col justify center service-heading text-center my-5 px-2">
-                <h1 className="font-normal text-xl glance shadow-2xl ">At On Glance</h1>
                 <h2 className="sm:text-5xl lg:text-5xl font-light text-gray-600 my-5">Our Popular <span className="font-medium text-purple-700">Services</span></h2>
                 <p className="text-lg text-gray-500">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs.Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs </p>
             </div>
@@ -28,7 +27,7 @@ const Services = () => {
                                 <p className="font-normal text-gray-700 mb-3">{service.short_desc.slice(0, 150)}</p>
                                 <Link to={`/service/${service.id}`}>
                                     <button className="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center">
-                                        <FontAwesomeIcon icon={faHandHoldingMedical} className="mx-1" />  Get this service
+                                        <FontAwesomeIcon className="mx-2" icon={faHandHoldingMedical} />  Get this service
                                     </button>
                                 </Link>
                             </div>
@@ -41,4 +40,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default AllService;

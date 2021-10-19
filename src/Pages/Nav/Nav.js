@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import logo from '../../images/logo.png';
 import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 function Nav() {
     const [isOpen, setIsOpen] = useState(false);
+    const { user, signOutUser } = useAuth();
+
+
+
     return (
         <div className="shadow-lg">
             <nav className="bg-white-700">
@@ -29,7 +34,7 @@ function Nav() {
                                     </Link>
 
                                     <Link
-                                        to="#"
+                                        to="/services"
                                         className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Services
@@ -44,7 +49,7 @@ function Nav() {
                                     </Link>
 
                                     <Link
-                                        to="#"
+                                        to="/about"
                                         className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         About Us
@@ -58,13 +63,18 @@ function Nav() {
                                         Contact Us
 
                                     </Link>
-                                    <Link
-                                        to="/login"
-                                        className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                    >
-                                        Login
-
-                                    </Link>
+                                    {
+                                        user.email ?
+                                            (<button className="text-white bg-red-500 hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={signOutUser}>
+                                                Logout
+                                            </button>)
+                                            :
+                                            (<Link
+                                                to="/login"
+                                                className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                                                Login
+                                            </Link>)
+                                    }
                                 </div>
 
                             </div>
@@ -140,14 +150,14 @@ function Nav() {
                         <div className="md:hidden" id="mobile-menu">
                             <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                                 <Link
-                                    to="#"
+                                    to="/"
                                     className="hover:bg-gray-700 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
                                     Home
                                 </Link>
 
                                 <Link
-                                    to="#"
+                                    to="/services"
                                     className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
                                     Services
@@ -161,7 +171,7 @@ function Nav() {
                                 </Link>
 
                                 <Link
-                                    href="#"
+                                    href="/about"
                                     className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
                                     About Us
@@ -173,13 +183,22 @@ function Nav() {
                                 >
                                     Contact Us
                                 </Link>
-                                <Link
-                                    to="#"
-                                    className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                                >
-                                    Login
+                                {
+                                    user.email ?
+                                        (<button className="text-white bg-red-500 hover:bg-red-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={signOutUser}>
+                                            Logout
+                                        </button>)
 
-                                </Link>
+                                        :
+                                        (<Link
+                                            to="/login"
+                                            className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                        >
+                                            Login
+
+                                        </Link>)
+
+                                }
                             </div>
                         </div>
                     )}

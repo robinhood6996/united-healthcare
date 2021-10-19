@@ -1,20 +1,40 @@
-import { getAuth, signInWithEmailAndPassword } from '@firebase/auth';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
-import initializeAuthentication from '../../firebase/firebase.init';
+import { Link, useLocation, useHistory } from 'react-router-dom';
+// import Swal from 'sweetalert2';
+import useAuth from '../../Hooks/useAuth';
 
-initializeAuthentication();
-const auth = getAuth();
+
 
 const Login = () => {
-
+    //set user hook
+    const { signInUser, googleSingIn } = useAuth({});
+    const location = useLocation();
+    const history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const redirectURL = location.state?.from || '/';
+
     const onSubmit = user => {
-        signInWithEmailAndPassword(auth, user.email, user.password)
-            .then((res) => {
-                const { user } = res;
-                console.log(user);
+        signInUser(user.email, user.password)
+            .then(res => {
+                // const { user } = res;
+                // setUser(user);
+                history.push(redirectURL);
+                // Swal('sign in successfully', 'Welcome Back', 'info')
+
+            });
+        // .catch(error => {
+        //     Swal.fire({
+        //         icon: 'error',
+        //         title: 'Oops...',
+        //         text: `${error.message}`
+        //     })
+        // }).finally(() => setIsLoading(false))
+    }
+    const handleGoogleSignIn = () => {
+        googleSingIn()
+            .then(res => {
+                history.push(redirectURL)
             })
     }
 
@@ -45,9 +65,9 @@ const Login = () => {
 
                         <p className="text-right mb-2">Forgot password</p>
                         <label className="text-gray-800 mb-2">or</label>
-                        <button className="w-full h-12 rounded-lg bg-red-600 text-gray-200 uppercase font-semibold hover:bg-red-700 text-gray-100 transition mb-3">Sign with Google</button>
+                        <button className="w-full h-12 rounded-lg bg-red-600 text-gray-200 uppercase font-semibold hover:bg-red-700 text-gray-100 transition mb-3" onClick={handleGoogleSignIn}>Sign with Google</button>
                         <button className="w-full h-12 rounded-lg bg-blue-600 text-gray-200 uppercase font-semibold hover:bg-blue-700 text-gray-100 transition mb-3">Sign with Facebook</button>
-                        <button className="w-full h-12 rounded-lg bg-gray-800 text-gray-200 uppercase font-semibold hover:bg-gray-900 text-gray-100 transition mb-3">Sign with Github</button>
+
 
                     </div>
                 </div>

@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.3.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "@headlessui/react": "^1.4.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -14,6 +17,7 @@
     "react-hook-form": "^7.17.4",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "sweetalert2": "^11.1.9",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

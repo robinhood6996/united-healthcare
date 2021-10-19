@@ -3,6 +3,7 @@ import './Footer.css';
 import logo from '../../images/logo.png';
 import { Link } from 'react-router-dom';
 
+
 const Footer = () => {
     return (
         <div className="">
@@ -19,7 +20,7 @@ const Footer = () => {
                 </div>
 
                 <div className="my-5 mx-auto">
-                    <h2 className="text-xl font-medium">Quick Visit</h2>
+                    <h2 className="text-xl font-medium"> Quick Visit</h2>
                     <ul className="my-5">
                         <li className="text-md text-gray-300 my-2">
                             <Link to="/">Our Doctors</Link>

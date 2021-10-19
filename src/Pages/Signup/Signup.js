@@ -1,22 +1,35 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import initializeAuthentication from '../../firebase/firebase.init'
+import useAuth from '../../Hooks/useAuth';
+// import Swal from 'sweetalert2';
 
 
-initializeAuthentication();
-const auth = getAuth();
+
+// const auth = getAuth();
+// const Toast = Swal.mixin({
+//     toast: true,
+//     position: 'top-end',
+//     showConfirmButton: false,
+//     timer: 3000,
+//     timerProgressBar: true,
+//     didOpen: (toast) => {
+//         toast.addEventListener('mouseenter', Swal.stopTimer)
+//         toast.addEventListener('mouseleave', Swal.resumeTimer)
+//     }
+// });
+
 const Signup = () => {
 
+    const { signupUser } = useAuth();
+    // const history = useHistory();
+
     const { register, handleSubmit, formState: { errors } } = useForm();
+
     const onSubmit = data => {
-        createUserWithEmailAndPassword(auth, data.email, data.password)
-            .then((res) => {
-                const { user } = res;
-                console.log(user);
-            });
+        signupUser(data.email, data.password, data.name);
     }
+
 
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -1,3 +1,5 @@
+import { faBookMedical, faSearchPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 // import slide1 from '../../images/slider/1.jpg';
 import './Slider.css';
@@ -13,8 +15,8 @@ const Slider = () => {
                         Globally harness multimedia based collaboration and idea-sharing with<br /> backend products. Continually whiteboard superior opportunities via<br /> covalent scenarios.
                     </p>
                     <div className="flex gap-x-5 mt-5">
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Discover More</button>
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View all service</button>
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded "> <FontAwesomeIcon icon={faSearchPlus} /> Discover More</button>
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><FontAwesomeIcon icon={faBookMedical} /> View all service</button>
                     </div>
                 </div>
             </div>

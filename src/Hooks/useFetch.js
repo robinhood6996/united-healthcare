@@ -5,7 +5,7 @@ const useFetch = () => {
 
 
     useEffect(() => {
-        fetch('./services.json')
+        fetch('https://robinhood6996.github.io/health-care-json/services.json')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
