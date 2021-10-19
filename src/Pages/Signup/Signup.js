@@ -2,30 +2,17 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
-// import Swal from 'sweetalert2';
 
-
-
-// const auth = getAuth();
-// const Toast = Swal.mixin({
-//     toast: true,
-//     position: 'top-end',
-//     showConfirmButton: false,
-//     timer: 3000,
-//     timerProgressBar: true,
-//     didOpen: (toast) => {
-//         toast.addEventListener('mouseenter', Swal.stopTimer)
-//         toast.addEventListener('mouseleave', Swal.resumeTimer)
-//     }
-// });
 
 const Signup = () => {
 
+    // get signup user function form auth hook
     const { signupUser } = useAuth();
     // const history = useHistory();
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
+    //Singup funciton
     const onSubmit = data => {
         signupUser(data.email, data.password, data.name);
     }
@@ -38,9 +25,7 @@ const Signup = () => {
 
                 <div className="w-full flex item-center justify-center my-5">
                     <div className="bg-gray-200 w-96 h-auto rounded-lg pt-8 pb-8 px-8 flex flex-col items-center">
-                        {/* <label className="font-light text-2xl mb-3" htmlFor="">Name</label>
-                        <input className="w-full h-12 rounded-lg px-4 text-lg focus:ring-blue-600 mb-4" type="text" placeholder="Enter you name" /> */}
-                        {/* <label className="font-light text-2xl mb-2" htmlFor="">Email</label> */}
+
                         <h1 className="text-5xl my-5">SIGNUP</h1>
 
 

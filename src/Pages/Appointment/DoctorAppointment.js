@@ -1,11 +1,11 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import Swal from 'sweetalert2';
 import useAuth from '../../Hooks/useAuth';
-import { useForm } from "react-hook-form";
 
-const Appointment = () => {
-    const { title } = useParams();
+const DoctorAppointment = () => {
+    const { name } = useParams();
     const { user } = useAuth();
 
 
@@ -21,7 +21,7 @@ const Appointment = () => {
 
     return (
         <div className="container mx-auto mt-5 mb-5">
-            <h1 className="lg:text-5xl sm:text-4xl font-bold text-red-600 my-5 text-center">Book Your Appointment</h1>
+            <h1 className="lg:text-5xl sm:text-4xl font-bold text-red-600 my-5 text-center">Book Your Doctor Appointment</h1>
             <div className="form-container flex justify-center">
                 <form className="w-full mx-5" onSubmit={handleSubmit(submitAppointment)}>
                     <div className="flex flex-wrap -mx-3 mb-6">
@@ -44,7 +44,25 @@ const Appointment = () => {
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
                                 Subject
                             </label>
-                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" defaultValue={title} {...register("subject", { required: true })} />
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text"  {...register("subject", { required: true })} />
+                            <p className="text-gray-600 text-xs italic">Your expected service</p>
+                        </div>
+                    </div>
+                    <div className="flex flex-wrap -mx-3 mb-6">
+                        <div className="w-full px-3">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
+                                Doctor Name
+                            </label>
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" defaultValue={name}  {...register("doctorName", { required: true })} />
+                            <p className="text-gray-600 text-xs italic">Your expected service</p>
+                        </div>
+                    </div>
+                    <div className="flex flex-wrap -mx-3 mb-6">
+                        <div className="w-full px-3">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
+                                Date
+                            </label>
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="date"  {...register("date", { required: true })} />
                             <p className="text-gray-600 text-xs italic">Your expected service</p>
                         </div>
                     </div>
@@ -98,4 +116,4 @@ const Appointment = () => {
     );
 };
 
-export default Appointment;
+export default DoctorAppointment;

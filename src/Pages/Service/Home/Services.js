@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import useFetch from '../../../Hooks/useFetch';
 
 const Services = () => {
+
+    // services data fetch from json file
     const [services] = useFetch();
 
     return (

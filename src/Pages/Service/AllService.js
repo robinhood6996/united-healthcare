@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import useFetch from '../../Hooks/useFetch';
 
 const AllService = () => {
+    //get all data from json file
     const [services] = useFetch();
 
     return (
@@ -14,6 +15,8 @@ const AllService = () => {
                 <p className="text-lg text-gray-500">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs.Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs </p>
             </div>
             <div className="grid gap-5  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 services ">
+
+                {/* Show all services */}
                 {
                     services.map(service => <div className="max-w-lg mx-auto px-8" key={service.id}>
                         <div className="bg-white border border-gray-200 shadow-md rounded-lg mx-w-sm mb-5">

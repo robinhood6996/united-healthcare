@@ -15,6 +15,7 @@ import Faq from './Pages/Faq/Faq';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import Doctors from './Pages/Doctors/Doctors';
+import DoctorAppointment from './Pages/Appointment/DoctorAppointment';
 
 
 function App() {
@@ -24,24 +25,31 @@ function App() {
         <Router>
           <Nav></Nav>
           <Switch>
+            {/* Home ROute */}
             <Route exact path="/">
               <Home></Home>
             </Route>
+            {/* Single service  Route */}
             <Route path="/service/:id">
               <SingleService></SingleService>
             </Route>
+            {/* Login Route */}
             <Route path="/login">
               <Login></Login>
             </Route>
+            {/* Signup Route */}
             <Route path="/signup">
               <Signup></Signup>
             </Route>
+            {/* Services Route */}
             <Route path="/services">
               <AllService></AllService>
             </Route>
+            {/* Doctor Route */}
             <Route path="/doctors">
               <Doctors></Doctors>
             </Route>
+            {/* Doctor Route */}
             <Route path="/about">
               <About></About>
             </Route>
@@ -50,6 +58,9 @@ function App() {
             </Route>
             <PrivateRoute path="/appointment/:title">
               <Appointment></Appointment>
+            </PrivateRoute>
+            <PrivateRoute path="/doctor/:name">
+              <DoctorAppointment></DoctorAppointment>
             </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>

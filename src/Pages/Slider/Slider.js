@@ -1,8 +1,9 @@
 import { faBookMedical, faSearchPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-// import slide1 from '../../images/slider/1.jpg';
 import './Slider.css';
+
+
 const Slider = () => {
     return (
         <div className="">

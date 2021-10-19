@@ -2,7 +2,6 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import Swal from 'sweetalert2';
-// import Swal from 'sweetalert2';
 import useAuth from '../../Hooks/useAuth';
 
 
@@ -18,10 +17,8 @@ const Login = () => {
     const onSubmit = user => {
         signInUser(user.email, user.password)
             .then(res => {
-                // const { user } = res;
-                // setUser(user);
+                //redirect to previous page or homepage
                 history.push(redirectURL);
-                // Swal('sign in successfully', 'Welcome Back', 'info')
 
             }).catch(error => {
                 Swal.fire({
@@ -32,6 +29,7 @@ const Login = () => {
             })
     }
 
+    //Google signin function
     const handleGoogleSignIn = () => {
         googleSingIn()
             .then(res => {

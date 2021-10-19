@@ -7,6 +7,7 @@ import './Nav.css'
 
 function Nav() {
     const [isOpen, setIsOpen] = useState(false);
+    //use auth hook for trac user
     const { user, signOutUser } = useAuth();
 
 
@@ -14,6 +15,7 @@ function Nav() {
     return (
         <div className="shadow-lg sticky top-0 bg-white z-50">
             <div>
+                {/* Display Username */}
                 {
                     user.email ? (<div className="lg:hidden md:hidded sm:block text-center">
                         <h2 className="md:font-bold text-red-600 text-sm"><span className="md:font-sm text-gray-800 ">Welcome!</span> {user.displayName}</h2>
@@ -102,7 +104,7 @@ function Nav() {
 
                         </div>
 
-
+                        {/* Mobile View From Here */}
 
                         <div className="-mr-2 flex md:hidden">
                             <button
@@ -225,20 +227,6 @@ function Nav() {
                 </Transition>
             </nav >
 
-            {/* <header className="bg-white shadow">
-                <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-                </div>
-            </header>
-            <main>
-                <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-
-                    <div className="px-4 py-6 sm:px-0">
-                        <div className="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
-                    </div>
-
-                </div>
-            </main> */}
         </div >
     );
 }

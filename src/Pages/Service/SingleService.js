@@ -7,12 +7,15 @@ import useFetch from '../../Hooks/useFetch';
 
 const SingleService = () => {
     const history = useHistory();
+    // get service id from url
     const { id } = useParams();
+    //get service hook data
     const [services] = useFetch();
-    console.log(services)
+
+    //filter specific data based on user clicked
     const service = services?.filter(item => item.id == id);
 
-
+    // Handle appointment private route
     const handleAppointment = (title) => {
         history.push(`/appointment/${title}`);
     }
@@ -20,6 +23,7 @@ const SingleService = () => {
     return (
         <div className="container mx-auto">
             <hr />
+            {/* Map on user data */}
             {service.map(item => <div className="singleService" key={item.id}>
                 <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                     <div className="p-5">
