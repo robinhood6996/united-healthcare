@@ -1,5 +1,4 @@
-import { faEnvelopeOpen, faLocationArrow, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import React from 'react';
 import patient1 from '../../images/patients/1.jpg';
 import patient2 from '../../images/patients/2.jpg';
@@ -9,7 +8,7 @@ import patient4 from '../../images/patients/4.jpg';
 const Testimonial = () => {
     return (
         <div>
-            <div className="git-container bg-red-800 p-4 rounded">
+            <div className="git-container bg-red-800 p-4">
                 <div className="git-header text-center">
                     <h1 className="sm:text-5xl md:text-6xl lg:text-6xl font-semibold text-gray-900 ">Patients Testimonial</h1>
                     <p className="text-md font-light text-white mt-5 w-3/4 mx-auto">It’s always the word of mouth that’s the best advice. Here are some of our…</p>

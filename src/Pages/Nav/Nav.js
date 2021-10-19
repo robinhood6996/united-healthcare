@@ -3,6 +3,7 @@ import { Transition } from "@headlessui/react";
 import logo from '../../images/logo.png';
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import './Nav.css'
 
 function Nav() {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,9 +15,8 @@ function Nav() {
         <div className="shadow-lg sticky top-0 bg-white z-50">
             <div>
                 {
-                    user.email ? (<div className="lg:hidden text-center">
+                    user.email ? (<div className="lg:hidden md:hidded sm:block text-center">
                         <h2 className="md:font-bold text-red-600 text-sm"><span className="md:font-sm text-gray-800 ">Welcome!</span> {user.displayName}</h2>
-
                     </div>) : ('')
                 }
                 <hr />
@@ -51,7 +51,7 @@ function Nav() {
                                     </Link>
 
                                     <Link
-                                        to="#"
+                                        to="/doctors"
                                         className="text-black hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Doctors
@@ -87,18 +87,21 @@ function Nav() {
                                                 Login
                                             </Link>)
                                     }
+                                    <div className="mx-10 username">
+                                        {
+                                            user.email ? (<div className="sm:hidden md:block lg:block text-center pcuser">
+                                                <h2 className="md:font-bold text-red-600 text-sm"><span className="md:font-sm text-gray-800 ">Welcome!</span> {user.displayName}</h2>
+
+                                            </div>) : ('')
+                                        }
+                                    </div>
 
                                 </div>
 
                             </div>
 
                         </div>
-                        {
-                            user.email ? (<div className="sm:hidden md:block lg:block mx-auto text-center">
-                                <h2 className="md:font-bold text-red-600 text-sm"><span className="md:font-sm text-gray-800 ">Welcome!</span> {user.displayName}</h2>
 
-                            </div>) : ('')
-                        }
 
 
                         <div className="-mr-2 flex md:hidden">
@@ -180,7 +183,7 @@ function Nav() {
                                 </Link>
 
                                 <Link
-                                    to="/"
+                                    to="/doctors"
                                     className="text-black hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                                 >
                                     Doctors

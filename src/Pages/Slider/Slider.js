@@ -15,8 +15,8 @@ const Slider = () => {
                         Globally harness multimedia based collaboration and idea-sharing with<br /> backend products. Continually whiteboard superior opportunities via<br /> covalent scenarios.
                     </p>
                     <div className="flex gap-x-5 mt-5 py-4">
-                        <button className="bg-red-800 hover:bg-gray-700 transition duration-1000 text-white sm:hidden font-bold py-2 px-4 rounded "> <FontAwesomeIcon icon={faSearchPlus} /> Discover More</button>
-                        <button className="bg-red-800 hover:bg-gray-700 transition duration-1000 text-white font-bold py-2 px-4 rounded"><FontAwesomeIcon icon={faBookMedical} /> View all service</button>
+                        <button className="bg-red-800 hover:bg-gray-700 transition duration-1000 text-white font-bold py-1 sm:hidden md:block  px-4 rounded "> <FontAwesomeIcon icon={faSearchPlus} /> Discover More</button>
+                        <button className="bg-red-800 hover:bg-gray-700 transition duration-1000 text-white font-bold py-1 px-4 rounded"><FontAwesomeIcon icon={faBookMedical} /> View all service</button>
                     </div>
                 </div>
             </div>

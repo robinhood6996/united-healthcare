@@ -21,9 +21,9 @@ const Appointment = () => {
 
     return (
         <div className="container mx-auto mt-5 mb-5">
-            <h1 className="text-5xl font-bold text-red-600 my-5 text-center">Book Your Appointment</h1>
+            <h1 className="lg:text-5xl sm:text-4xl font-bold text-red-600 my-5 text-center">Book Your Appointment</h1>
             <div className="form-container flex justify-center">
-                <form className="w-full " onSubmit={handleSubmit(submitAppointment)}>
+                <form className="w-full mx-5" onSubmit={handleSubmit(submitAppointment)}>
                     <div className="flex flex-wrap -mx-3 mb-6">
                         <div className="w-full md:w-2/2 px-3 mb-6 md:mb-0">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">

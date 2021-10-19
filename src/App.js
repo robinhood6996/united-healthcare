@@ -2,8 +2,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Nav from './Pages/Nav/Nav';
-import Slider from './Pages/Slider/Slider';
-import Services from './Pages/Service/Home/Services';
 import Footer from './Pages/Footer/Footer';
 import SingleService from './Pages/Service/SingleService';
 import Login from './Pages/Login/Login';
@@ -16,6 +14,7 @@ import PrivateRoute from './routes/PrivateRoute';
 import Faq from './Pages/Faq/Faq';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
+import Doctors from './Pages/Doctors/Doctors';
 
 
 function App() {
@@ -39,6 +38,9 @@ function App() {
             </Route>
             <Route path="/services">
               <AllService></AllService>
+            </Route>
+            <Route path="/doctors">
+              <Doctors></Doctors>
             </Route>
             <Route path="/about">
               <About></About>

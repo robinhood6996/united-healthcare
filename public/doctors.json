@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Chase Franklin",
+        "title": "Pediatrics",
+        "details": "Podcasting operational change management inside of workflows to establish a framework.",
+        "img": "https://i.ibb.co/GT16Y4K/1.png"
+    },
+    {
+        "id": 2,
+        "name": "Anna Wilson",
+        "title": "Cardiology",
+        "details": "Quickly disseminate superior deliverables whereas web-enabled applications. Quickly drive clicks-and-mortar catalysts.",
+        "img": "https://i.ibb.co/Tk4y8sR/2.png"
+    },
+    {
+        "id": 3,
+        "name": "LEAD NURSE",
+        "title": "Neurosurgery",
+        "details": "Seamlessly visualize quality intellectual capital without superior collaboration and installed base portals.",
+        "img": "https://i.ibb.co/x6JGyHF/3.png"
+    },
+    {
+        "id": 4,
+        "name": "Hubert Jackson",
+        "title": "Cancer Care",
+        "details": "Energistically scale future-proof core competencies vis-a-vis impactful experiences with optimal networks.",
+        "img": "https://i.ibb.co/Wc0csJk/4.png"
+    },
+    {
+        "id": 5,
+        "name": "Harison Milton",
+        "title": "Heart/Cardiovascular Specialist",
+        "details": "Energistically scale future-proof core competencies vis-a-vis impactful experiences with optimal networks.",
+        "img": "https://i.ibb.co/Bw41j1J/5-1.png"
+    },
+    {
+        "id": 6,
+        "name": "Alex Jam",
+        "title": "Radiologist",
+        "details": "Energistically scale future-proof core competencies vis-a-vis impactful experiences with optimal networks.",
+        "img": "https://i.ibb.co/dJxSn04/5-2.png"
+    }
+]

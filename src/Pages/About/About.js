@@ -9,13 +9,13 @@ const About = () => {
             <div className="heading shadow-lg p-5 mt-5">
                 <h2 className="text-5xl font-light my-5">What we stand for ?</h2>
                 <h2 className="text-5xl font-bold text-red-700 my-5">Our core values</h2>
-                <p className="text-lg font-medium text-gray-500">Completely synergize resource taxing relationships via premier niche markets.<br /> Professionally cultivate one-to-one customer service with robust ideas.</p>
+                <p className="text-lg font-medium text-gray-500 mx-5">Completely synergize resource taxing relationships via premier niche markets.<br /> Professionally cultivate one-to-one customer service with robust ideas.</p>
             </div>
 
-            <div className="about-content grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-4 mb-5">
+            <div className="about-content grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-4 mb-5 mx-5">
 
                 {/* About Item */}
-                <div className="about-item flex gap-4  p-4 shadow-lg">
+                <div className="about-item flex gap-4 p-4 shadow-lg">
                     <div className="icon">
                         <FontAwesomeIcon className="text-7xl text-red-700" icon={faUserMd} />
                     </div>

@@ -5,12 +5,12 @@ import faqImg from '../../images/faq.jpg';
 const Faq = () => {
     return (
         <div className="container mx-auto my-5">
-            <div className="faq-heading">
+            <div className="faq-heading mx-3">
                 <h3 className="text-sm font-thin mb-5 border p-3 shadow-lg">KNOWLEDGE IS THE PATH TO SUCCESS</h3>
                 <h2 className="text-5xl font-light">Usual Questions</h2>
                 <h2 className="text-6xl font-bold text-red-800 my-3">from Our patients</h2>
             </div>
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-3">
                 <div className="">
                     <img src={faqImg} className="rounded shadow-lg my-5" alt="" />
                 </div>
@@ -49,7 +49,7 @@ const Faq = () => {
                                 <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="phone" type="phone" />
                             </div>
                             <div className="flex flex-wrap -mx-3 mb-6">
-                                <div className="w-full px-3">
+                                <div className="w-full px-3 mx-3">
                                     <input className="appearance-none block w-full bg-red-800 text-gray-50 border border-gray-200 rounded py-3 px-4 mb-3" id="phone" type="submit" />
                                 </div>
                             </div>
@@ -65,7 +65,7 @@ const Faq = () => {
                     <p className="text-md font-light text-white mt-5 w-3/4 mx-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A alias ratione culpa cumque perferendis quis veniam repellendus minus repellat explicabo eum saepe consequuntur repudiandae vitae, earum ex praesentium, ab in.</p>
                 </div>
 
-                <div className="git-content flex justify-center mt-12 mb-10 gap-10">
+                <div className="git-content grid sm:grid-cols-1 lg:grid-cols-3 mt-12 mb-10 gap-10">
                     <div className="git-item text-center">
                         <FontAwesomeIcon icon={faLocationArrow} className="bg-white transition duration-500 hover:bg-red-700 hover:text-white text-gray-700 text-6xl rounded-full hover:p-5 p-4" />
                         <h4 className="text-lg text-gray-50 font-bold my-2">Address</h4>
