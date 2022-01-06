@@ -13,7 +13,7 @@ const Slider = () => {
                     <h3 className="inspire-txt text-2xl uppercase my-5">Inspiring better health</h3>
                     <h1 className="text-6xl	my-5"><span className="text-red-800 font-bold">Healthy Life,</span><br /><span className="text-5xl"> healthy Family</span></h1>
                     <p className="font-medium text-lg mt-4">
-                        Globally harness multimedia based collaboration and idea-sharing with<br /> backend products. Continually whiteboard superior opportunities via<br /> covalent scenarios.
+                        Globally harness multimedia based collaboration and idea-sharing with<br /> backend products. Continually whiteboard superior opportunities via<br /> covalent scenarios 88.
                     </p>
                     <div className="flex gap-x-5 mt-5 py-4">
                         <button className="bg-red-800 hover:bg-gray-700 transition duration-1000 text-white font-bold py-1 sm:hidden md:block  px-4 rounded "> <FontAwesomeIcon icon={faSearchPlus} /> Discover More</button>
